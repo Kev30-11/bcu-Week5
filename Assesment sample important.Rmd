@@ -6,6 +6,9 @@ editor_options:
   chunk_output_type: console
 ---
 
+
+This if for part C
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
@@ -59,8 +62,8 @@ qualtrics_data
 qualtrics_data%>%
   separate_rows(Q2,
                 sep = ",")%>%
-  count(Q2)%>%
-  mutate(Q2 = fct_reorder(Q2, n))%>%
+  count(Q2) %>%
+  mutate(Q2 = fct_reorder(Q2, n)) %>%
   ggplot() +
   aes( x= n,
        y= Q2)+
